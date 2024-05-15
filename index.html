@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculateur d'âge et signes astrologiques</title>
+        <link rel="stylesheet" href="./assets/css/style.css">
+    </head>
+    <body>
+        <div class="container">
+            <h2>Calculateur d'âge et signes astrologiques</h2>
+            <form id="ageCalculator">
+                <label for="firstName">Prénom :</label>
+                <input type="text" id="firstName" required />
+                <label for="birthDay">Jour de naissance :</label>
+                <input type="number" id="birthDay" min="1" max="31" required />
+                <label for="birthMonth">Mois de naissance :</label>
+                <select id="birthMonth" required>
+                    <option value="1">Janvier</option>
+                    <option value="2">Février</option>
+                    <option value="3">Mars</option>
+                    <option value="4">Avril</option>
+                    <option value="5">Mai</option>
+                    <option value="6">Juin</option>
+                    <option value="7">Juillet</option>
+                    <option value="8">Août</option>
+                    <option value="9">Septembre</option>
+                    <option value="10">Octobre</option>
+                    <option value="11">Novembre</option>
+                    <option value="12">Décembre</option>
+                </select>
+                <label for="birthYear">Année de naissance :</label>
+                <input type="number" id="birthYear" min="1900" max="2100" required />
+                <input type="submit" value="Calculer" />
+            </form>
+            <div id="results" style="display: none">
+                <p id="ageResult"></p>
+                <p id="zodiacSign"></p>
+                <p id="chineseSign"></p>
+                <p id="countdown"></p>
+            </div>
+        </div>
+        <script src="./assets/js/script.js"></script>
+    </body>
+</html>
