@@ -8,30 +8,30 @@
     </head>
     <body>
         <div class="container">
-            <h2>Calculateur d'âge et signes astrologiques</h2>
+            <center><h2>Calculateur d'âge et signes astrologiques</h2></center>
             <form id="ageCalculator">
-                <label for="firstName">Prénom :</label>
-                <input type="text" id="firstName" required />
-                <label for="birthDay">Jour de naissance :</label>
-                <input type="number" id="birthDay" min="1" max="31" required />
+                <label for="firstName">Prénom :</label><br>
+                <input type="text" id="firstName" required /><br>
+                <label for="birthDay">Jour de naissance :</label><br>
+                <input type="number" id="birthDay" min="1" max="31" required /><br>
                 <label for="birthMonth">Mois de naissance :</label>
-                <select id="birthMonth" required>
-                    <option value="1">Janvier</option>
-                    <option value="2">Février</option>
-                    <option value="3">Mars</option>
-                    <option value="4">Avril</option>
-                    <option value="5">Mai</option>
-                    <option value="6">Juin</option>
-                    <option value="7">Juillet</option>
-                    <option value="8">Août</option>
-                    <option value="9">Septembre</option>
-                    <option value="10">Octobre</option>
-                    <option value="11">Novembre</option>
-                    <option value="12">Décembre</option>
-                </select>
+                <div id="birthMonth" class="checkbox-grid">
+                    <label><input type="checkbox" name="birthMonth" value="1" /> Janvier</label>
+                    <label><input type="checkbox" name="birthMonth" value="2" /> Février</label>
+                    <label><input type="checkbox" name="birthMonth" value="3" /> Mars</label>
+                    <label><input type="checkbox" name="birthMonth" value="4" /> Avril</label>
+                    <label><input type="checkbox" name="birthMonth" value="5" /> Mai</label>
+                    <label><input type="checkbox" name="birthMonth" value="6" /> Juin</label>
+                    <label><input type="checkbox" name="birthMonth" value="7" /> Juillet</label>
+                    <label><input type="checkbox" name="birthMonth" value="8" /> Août</label>
+                    <label><input type="checkbox" name="birthMonth" value="9" /> Septembre</label>
+                    <label><input type="checkbox" name="birthMonth" value="10" /> Octobre</label>
+                    <label><input type="checkbox" name="birthMonth" value="11" /> Novembre</label>
+                    <label><input type="checkbox" name="birthMonth" value="12" /> Décembre</label>
+                </div>
                 <label for="birthYear">Année de naissance :</label>
                 <input type="number" id="birthYear" min="1900" max="2100" required />
-                <input type="submit" value="Calculer" />
+                <center><input type="submit" value="Calculer" /></center>
             </form>
             <div id="results" style="display: none">
                 <p id="ageResult"></p>
@@ -40,6 +40,7 @@
                 <p id="countdown"></p>
             </div>
         </div>
+        <img src="" alt="" />
         <script src="./assets/js/script.js"></script>
     </body>
 </html>
