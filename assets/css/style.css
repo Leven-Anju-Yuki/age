@@ -64,7 +64,11 @@ input[type="submit"] {
     box-sizing: border-box;
 }
 
-p {
-    margin-bottom: 10px;
-    color: blue;
+.reponse p {
+    margin: 15px 0px;
+    font-style: bold !important;
+    /* color: blue; */
+}
+.reponse img {
+    width: 20%;
 }
