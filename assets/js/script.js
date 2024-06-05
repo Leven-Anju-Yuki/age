@@ -38,12 +38,12 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
 
     // Déterminer le texte du compte à rebours jusqu'à l'anniversaire
     var countdownText = "";
-    if (daysUntilBirthday === 10) {
-        countdownText = "C'est bientôt votre anniversaire ! Plus que 10 jours.";
+    if (today.getDate() === nextBirthday.getDate() && today.getMonth() === nextBirthday.getMonth()) {
+        countdownText = "Joyeux anniversaire " + firstName + " !";
     } else if (daysUntilBirthday === 1) {
         countdownText = "Demain, c'est votre anniversaire !";
-    } else if (daysUntilBirthday === 0) {
-        countdownText = "Joyeux anniversaire " + firstName + " !";
+    } else if (daysUntilBirthday <= 10) {
+        countdownText = "C'est bientôt votre anniversaire ! Plus que " + daysUntilBirthday + " jours.";
     } else {
         countdownText = "Il reste " + daysUntilBirthday + " jours avant votre anniversaire.";
     }
