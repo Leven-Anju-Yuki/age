@@ -59,62 +59,62 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
     var zodiacSigns = [
         {
             name: "Capricorne",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/capricorne.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/capricornerouge.png",
             startDate: new Date(today.getFullYear(), 11, 23),
         },
         {
             name: "Verseau",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/verseau.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/verseaurouge.png",
             startDate: new Date(today.getFullYear(), 0, 21),
         },
         {
             name: "Poissons",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/poissons.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/poissonrouge.png",
             startDate: new Date(today.getFullYear(), 1, 20),
         },
         {
             name: "Bélier",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/belier.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/belierrouge.png",
             startDate: new Date(today.getFullYear(), 2, 21),
         },
         {
             name: "Taureau",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/taureau.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/taureaurouge.png",
             startDate: new Date(today.getFullYear(), 3, 20),
         },
         {
             name: "Gémeaux",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/gemeau.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/gemeaurouge.png",
             startDate: new Date(today.getFullYear(), 4, 21),
         },
         {
             name: "Cancer",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/cancer.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/cancerrouge.png",
             startDate: new Date(today.getFullYear(), 5, 22),
         },
         {
             name: "Lion",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/lion.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/lionrouge.png",
             startDate: new Date(today.getFullYear(), 6, 23),
         },
         {
             name: "Vierge",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/vierge.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/viergerouge.png",
             startDate: new Date(today.getFullYear(), 7, 23),
         },
         {
             name: "Balance",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/balance.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/balancerouge.png",
             startDate: new Date(today.getFullYear(), 8, 23),
         },
         {
             name: "Scorpion",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/scorpion.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/scorpionrouge.png",
             startDate: new Date(today.getFullYear(), 9, 24),
         },
         {
             name: "Sagittaire",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/sagittaire.png",
+            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/sagittairerouge.png",
             startDate: new Date(today.getFullYear(), 10, 23),
         },
     ];
