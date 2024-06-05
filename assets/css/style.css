@@ -1,74 +1,89 @@
+/* Réinitialisation des marges et des paddings pour tous les éléments */
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
 }
+
+/* Style de base pour le corps de la page */
 body {
     background: url(../img/signes-du-zodiaque.webp);
-    z-index: -100;
-    background-attachment: fixed;
-    /* Fixe l'image d'arrière-plan */
-    background-size: cover;
-    /* Ajuste la taille de l'image d'arrière-plan pour couvrir le conteneur */
-    background-position: center;
-    /* Centre l'image d'arrière-plan */
+    z-index: -100; /* Assure que l'image de fond reste en arrière-plan */
+    background-attachment: fixed; /* Fixe l'image d'arrière-plan */
+    background-size: cover; /* Ajuste la taille de l'image d'arrière-plan pour couvrir le conteneur */
+    background-position: center; /* Centre l'image d'arrière-plan */
 }
+
+/* Style pour les éléments span */
 span {
     color: #ec0000;
-    text-decoration: underline 2px solid black;
+    text-decoration: underline 2px solid black; /* Souligne le texte avec une ligne noire de 2px */
 }
+
+/* Style pour le conteneur principal */
 .container {
     max-width: 600px;
-    margin: 20px auto;
-    background-color: #ffffffc0;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 20px auto; /* Centre le conteneur horizontalement et ajoute une marge verticale de 20px */
+    background-color: #ffffffc0; /* Fond blanc avec une opacité de 75% */
+    padding: 20px; /* Ajoute un padding de 20px à l'intérieur du conteneur */
+    border-radius: 10px; /* Ajoute des coins arrondis de 10px */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre légère autour du conteneur */
 }
+
+/* Style pour la grille des cases à cocher */
 .checkbox-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    margin: 15px 0px;
+    grid-template-columns: repeat(3, 1fr); /* Définit une grille de 3 colonnes égales */
+    gap: 10px; /* Ajoute un espace de 10px entre les éléments de la grille */
+    margin: 15px 0px; /* Ajoute une marge verticale de 15px */
 }
+
+/* Style pour les labels des cases à cocher */
 .checkbox-grid label {
-    display: block;
-    text-decoration: none;
+    display: block; /* Affiche les labels en tant que blocs */
+    text-decoration: none; /* Supprime la décoration du texte */
 }
+
+/* Style pour les champs de texte, les champs numériques et les menus déroulants */
 input[type="text"],
 input[type="number"],
 select {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0px;
-    border: 1px solid #b91111;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-label {
-    font-weight: bold;
-    text-decoration: underline 2px #ff0000;
-    padding-bottom: 10px !important;
-}
-input[type="submit"] {
-    text-decoration: underline 2px black;
-    /* font-weight: bold; */
-    font-size: 1.4em;
-    width: 50%;
-    padding: 10px;
-    border: none;
-    background-color: #ff0000af;
-    color: #fff;
-    cursor: pointer;
-    border-radius: 5px;
-    box-sizing: border-box;
+    width: 100%; /* Prend toute la largeur du conteneur parent */
+    padding: 10px; /* Ajoute un padding de 10px à l'intérieur du champ */
+    margin: 10px 0px; /* Ajoute une marge verticale de 10px */
+    border: 1px solid #b91111; /* Bordure rouge foncé */
+    border-radius: 5px; /* Coins arrondis de 5px */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale de l'élément */
 }
 
-.reponse p {
-    margin: 15px 0px;
-    font-style: bold !important;
-    /* color: blue; */
+/* Style pour les labels */
+label {
+    font-weight: bold; /* Texte en gras */
+    text-decoration: underline 2px #ff0000; /* Souligne le texte avec une ligne rouge de 2px */
+    padding-bottom: 10px !important; /* Ajoute un padding inférieur de 10px */
 }
+
+/* Style pour le bouton de soumission */
+input[type="submit"] {
+    text-decoration: underline 2px black; /* Souligne le texte avec une ligne noire de 2px */
+    font-size: 1.4em; /* Augmente la taille de la police */
+    width: 50%; /* Prend 50% de la largeur du conteneur parent */
+    padding: 10px; /* Ajoute un padding de 10px à l'intérieur du bouton */
+    border: none; /* Supprime la bordure */
+    background-color: #ff0000af; /* Fond rouge avec une opacité */
+    color: #fff; /* Texte blanc */
+    cursor: pointer; /* Change le curseur en pointeur */
+    border-radius: 5px; /* Coins arrondis de 5px */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans la largeur totale de l'élément */
+}
+
+/* Style pour les paragraphes dans le conteneur de réponse */
+.reponse p {
+    margin: 15px 0px; /* Ajoute une marge verticale de 15px */
+    font-style: bold !important; /* Texte en gras */
+}
+
+/* Style pour les images dans le conteneur de réponse */
 .reponse img {
-    width: 20%;
+    width: 20%; /* Prend 20% de la largeur du conteneur parent */
 }
