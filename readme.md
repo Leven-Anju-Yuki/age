@@ -36,7 +36,7 @@ Ce projet est un calculateur d'âge et de signes astrologiques développé en HT
 1. Clonez le dépôt sur votre machine locale :
 
     ```bash
-    git clone https://github.com/votre-utilisateur/votre-depot.git
+    git clone https://github.com/Leven-Anju-Yuki/age.git
     ```
 
 2. Naviguez vers le dossier du projet :
@@ -83,11 +83,11 @@ votre-depot/
 
 - Ajouter des animations pour les résultats affichés.
 - Permettre la sélection de plusieurs mois avec un affichage conditionnel.
-- Ajouter des styles responsives pour une meilleure compatibilité mobile.
+- Ajouter des styles responsives pour une meilleure compatibilité mobile. (fait)
 - Intégrer une base de données pour enregistrer les anniversaires et envoyer des rappels.
 
 ## Contributeurs
 
-- [Florie](https://github.com/votre-utilisateur)
+- [Florie](https://github.com/Leven-Anju-Yuki)
 
 Si vous souhaitez contribuer à ce projet, n'hésitez pas à faire un fork du dépôt et à soumettre une pull request.
