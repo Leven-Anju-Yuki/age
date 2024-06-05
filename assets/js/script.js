@@ -38,12 +38,14 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
 
     // Déterminer le texte du compte à rebours jusqu'à l'anniversaire
     var countdownText = "";
-    if (daysUntilBirthday === 20) {
-        countdownText = "C'est bientôt votre anniversaire ! Plus que 20 jours.";
+    if (daysUntilBirthday === 10) {
+        countdownText = "C'est bientôt votre anniversaire ! Plus que 10 jours.";
     } else if (daysUntilBirthday === 1) {
         countdownText = "Demain, c'est votre anniversaire !";
     } else if (daysUntilBirthday === 0) {
         countdownText = "Joyeux anniversaire " + firstName + " !";
+    } else {
+        countdownText = "Il reste " + daysUntilBirthday + " jours avant votre anniversaire.";
     }
 
     // Texte de résultat pour l'âge
@@ -51,66 +53,18 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
 
     // Définir les signes astrologiques avec leurs images correspondantes et dates de début
     var zodiacSigns = [
-        {
-            name: "Capricorne",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/capricornerouge.png",
-            startDate: new Date(today.getFullYear(), 11, 23),
-        },
-        {
-            name: "Verseau",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/verseaurouge.png",
-            startDate: new Date(today.getFullYear(), 0, 21),
-        },
-        {
-            name: "Poisson",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/poissonrouge.png",
-            startDate: new Date(today.getFullYear(), 1, 20),
-        },
-        {
-            name: "Bélier",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/belierrouge.png",
-            startDate: new Date(today.getFullYear(), 2, 21),
-        },
-        {
-            name: "Taureau",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/taureaurouge.png",
-            startDate: new Date(today.getFullYear(), 3, 20),
-        },
-        {
-            name: "Gémeaux",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/gemeaurouge.png",
-            startDate: new Date(today.getFullYear(), 4, 21),
-        },
-        {
-            name: "Cancer",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/cancerrouge.png",
-            startDate: new Date(today.getFullYear(), 5, 22),
-        },
-        {
-            name: "Lion",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/lionrouge.png",
-            startDate: new Date(today.getFullYear(), 6, 23),
-        },
-        {
-            name: "Vierge",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/viergerouge.png",
-            startDate: new Date(today.getFullYear(), 7, 23),
-        },
-        {
-            name: "Balance",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/balancerouge.png",
-            startDate: new Date(today.getFullYear(), 8, 23),
-        },
-        {
-            name: "Scorpion",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/scorpionrouge.png",
-            startDate: new Date(today.getFullYear(), 9, 24),
-        },
-        {
-            name: "Sagittaire",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/sagittairerouge.png",
-            startDate: new Date(today.getFullYear(), 10, 23),
-        },
+        { name: "Capricorne", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/capricorne.png", startDate: new Date(today.getFullYear(), 11, 23) },
+        { name: "Verseau", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/verseau.png", startDate: new Date(today.getFullYear(), 0, 21) },
+        { name: "Poissons", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/poissons.png", startDate: new Date(today.getFullYear(), 1, 20) },
+        { name: "Bélier", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/belier.png", startDate: new Date(today.getFullYear(), 2, 21) },
+        { name: "Taureau", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/taureau.png", startDate: new Date(today.getFullYear(), 3, 20) },
+        { name: "Gémeaux", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/gemeau.png", startDate: new Date(today.getFullYear(), 4, 21) },
+        { name: "Cancer", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/cancer.png", startDate: new Date(today.getFullYear(), 5, 22) },
+        { name: "Lion", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/lion.png", startDate: new Date(today.getFullYear(), 6, 23) },
+        { name: "Vierge", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/vierge.png", startDate: new Date(today.getFullYear(), 7, 23) },
+        { name: "Balance", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/balance.png", startDate: new Date(today.getFullYear(), 8, 23) },
+        { name: "Scorpion", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/scorpion.png", startDate: new Date(today.getFullYear(), 9, 24) },
+        { name: "Sagittaire", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509324/age/astro/sagittaire.png", startDate: new Date(today.getFullYear(), 10, 23) }
     ];
 
     // Calculer le signe astrologique
@@ -118,10 +72,7 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
     var zodiacSign;
     for (var i = 0; i < zodiacSigns.length; i++) {
         var nextIndex = (i + 1) % zodiacSigns.length;
-        if (
-            birthDateThisYear >= zodiacSigns[i].startDate &&
-            birthDateThisYear < zodiacSigns[nextIndex].startDate
-        ) {
+        if (birthDateThisYear >= zodiacSigns[i].startDate && birthDateThisYear < zodiacSigns[nextIndex].startDate) {
             zodiacSign = zodiacSigns[i];
             break;
         }
@@ -129,54 +80,18 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
 
     // Signes astrologiques chinois avec leurs images correspondantes
     var chineseZodiacSigns = [
-        {
-            name: "Rat",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/rat.png",
-        },
-        {
-            name: "Bœuf",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/boeuf.png",
-        },
-        {
-            name: "Tigre",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/tigre.png",
-        },
-        {
-            name: "Lapin",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/lapin.png",
-        },
-        {
-            name: "Dragon",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/dragon.png",
-        },
-        {
-            name: "Serpent",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/serpent.png",
-        },
-        {
-            name: "Cheval",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/cheval.png",
-        },
-        {
-            name: "Chèvre",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/chevre.png",
-        },
-        {
-            name: "Singe",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/singe.png",
-        },
-        {
-            name: "Coq",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/coq.png",
-        },
-        {
-            name: "Chien",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/chien.png",
-        },
-        {
-            name: "Cochon",
-            image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/sanglier.png",
-        },
+        { name: "Rat", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/rat.png" },
+        { name: "Bœuf", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/boeuf.png" },
+        { name: "Tigre", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/tigre.png" },
+        { name: "Lapin", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/lapin.png" },
+        { name: "Dragon", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/dragon.png" },
+        { name: "Serpent", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/serpent.png" },
+        { name: "Cheval", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/cheval.png" },
+        { name: "Chèvre", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/chevre.png" },
+        { name: "Singe", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/singe.png" },
+        { name: "Coq", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/coq.png" },
+        { name: "Chien", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/chien.png" },
+        { name: "Cochon", image: "https://res.cloudinary.com/dgrszi9wf/image/upload/v1717509336/age/zodiaque/sanglier.png" }
     ];
 
     // Calculer le signe astrologique chinois
@@ -186,10 +101,8 @@ document.getElementById("ageCalculator").addEventListener("submit", function (ev
 
     // Afficher les résultats
     document.getElementById("ageResult").textContent = ageResult;
-    document.getElementById("zodiacSign").textContent =
-        "Votre signe astrologique est " + zodiacSign.name + ".";
-    document.getElementById("chineseSign").textContent =
-        "Votre signe chinois est " + chineseZodiacSign.name + ".";
+    document.getElementById("zodiacSign").textContent = "Votre signe astrologique est " + zodiacSign.name + ".";
+    document.getElementById("chineseSign").textContent = "Votre signe chinois est " + chineseZodiacSign.name + ".";
     document.getElementById("countdown").textContent = countdownText;
 
     // Ajouter l'image du signe astrologique
