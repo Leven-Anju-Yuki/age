@@ -7,7 +7,7 @@
 
 /* Style de base pour le corps de la page */
 body {
-    background: url(.https://res.cloudinary.com/dgrszi9wf/image/upload/v1717663853/age/fondcss.webp);
+    background: url(https://res.cloudinary.com/dgrszi9wf/image/upload/v1717663853/age/fondcss.webp);
     z-index: -100; /* Assure que l'image de fond reste en arrière-plan */
     background-attachment: fixed; /* Fixe l'image d'arrière-plan */
     background-size: cover; /* Ajuste la taille de l'image d'arrière-plan pour couvrir le conteneur */
